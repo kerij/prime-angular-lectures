@@ -7,3 +7,4 @@ npm install to get started.
 * master: Lecture #1. Includes basic Angular module/controller with ng-repeat directive, $scope, functions, and local variables.
 * custom-directive-http: Lecture #2. Includes custom directive with HTML partial, $http usage for POST/GET.
 * routing: Angular routing using ngRoute and app.config
+* factories: Angular Factories implemented. Makes use of $http promise/deferred objects to handle async issues
