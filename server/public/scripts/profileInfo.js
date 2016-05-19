@@ -5,7 +5,7 @@ myApp.directive('profileInfoDirective',
             scope: {
                 info: '='
             },
-            templateUrl: 'views/profileInfo.html',
+            templateUrl: '/views/profileInfo.html',
             controller: 'IndexController'
         }
     }

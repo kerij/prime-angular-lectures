@@ -10,10 +10,10 @@
 </head>
 
 <body ng-app="myApp">
-    <div ng-include="'header.html'"></div>
+    <div ng-include="'/views/header.html'"></div>
 
     <div ng-controller="IndexController">
-        <button ng-click="addPerson()">Add Person</button>
+        <button ng-click="doStuff()">Add Person</button>
 
         <div ng-repeat="person in people">
             <profile-info-directive info="person"></profile-info-directive>

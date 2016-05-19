@@ -57,7 +57,7 @@ myApp.controller('IndexController', ['$scope', '$http', function($scope, $http) 
             url: '/data/' + num,
             data: {number: num}
         }).then(function(response) {
-            console.log(response.data);
+            console.log(response);
         });
     }
 
