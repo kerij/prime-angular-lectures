@@ -1,4 +1,4 @@
-# iota-angular-basics
+# prime-angular-basics
 Lectures covering Angular. See Branches for demo code for each lecture/topic.
 
 npm install to get started.
