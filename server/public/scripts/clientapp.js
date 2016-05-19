@@ -30,13 +30,13 @@ myApp.controller('IndexController', ['$scope', function($scope) {
     };
 
     $scope.addPerson = function() {
-        $scope.people.push(
-            {
-                name: 'Scott',
-                position: 'Director of something',
-                location: 'Bloomington'
-            }
-        );
+      $scope.people.push(
+          {
+              name: 'Scott',
+              position: 'Director of something',
+              location: 'Bloomington'
+          }
+      );
     }
 
 }]);
