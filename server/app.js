@@ -3,12 +3,12 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
 // Serve back static files
-app.use(express.static(path.join(__dirname, './public')));
+// app.use('/public', express.static(path.join(__dirname, './public')));
+app.use('/public', express.static(__dirname + '/public/'));
 
 // Routes
 
