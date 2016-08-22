@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <title>Angular Magic</title>
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="/public/scripts/clientapp.js"></script>
 
 <body>
+  <div ng-controller="IndexController">
     <h1>&Omicron; Angular!</h1>
+    <p>Name: <input type="text" ng-model="firstname" /> </p>
+    <p>{{lastname}}, {{firstname}}</p>
 
-    <div>
-      
-    </div>
+
+  {{firstname}}
+  {{firstname}}
+  {{firstname}}
+  {{firstname}}
+
+  </div>
 
 </body>
 </html>
