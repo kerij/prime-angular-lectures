@@ -2,22 +2,47 @@
 <html lang="en" ng-app="myApp">
 <head>
     <title>Angular Magic</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="/public/vendors/angular.min.js"></script>
     <script src="/public/scripts/clientapp.js"></script>
+    <link rel="stylesheet" href="/public/vendors/bootstrap.min.css" type="text/css"/>
 
-<body>
-  <div ng-controller="IndexController">
-    <h1>&Omicron; Angular!</h1>
-    <p>Name: <input type="text" ng-model="firstname" /> </p>
-    <p>{{lastname}}, {{firstname}}</p>
+<body ng-controller="IndexController">
+  <!-- <h1>It works.</h1>
 
+  <p>
+    {{firstname}}
+  </p>
+  <p>
+    {{text}} <button ng-click="addPerson()">Click Me</button>
+  </p>
+  <ul ng-repeat="snack in snacks">
+    <li>
+      {{snack}}
+    </li>
+  </ul>
+  <ul ng-repeat="food in foods">
+    <li>
+      {{food.name}}
+    </li>
+  </ul> -->
 
-  {{firstname}}
-  {{firstname}}
-  {{firstname}}
-  {{firstname}}
-
+<!-- div in which to put the customer list -->
+  <div class="pull-left">
+    <ul ng-repeat="customer in customers">
+      <li ng-click="getOrders(customer.id)">
+        {{customer.first_name}} {{customer.last_name}}
+      </li>
+    </ul>
   </div>
 
+  <!-- div for the order history  -->
+  <div class="pull-right">
+    <ul ng-repeat="order in orders">
+      <li>
+        {{order.street}} {{order.city}} {{order.state}} {{order.zip}} {{order.address_type}} {{order.order_date | date : medium}} {{order.total}} {{order.quantity}} {{order.description}}
+      </li>
+    </ul>
+
+  </div>
 </body>
 </html>

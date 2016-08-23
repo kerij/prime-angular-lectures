@@ -2,8 +2,11 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+var things = require('./routes/thing');
+var customers = require('./routes/customers');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 
 // Serve back static files
@@ -11,6 +14,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/public', express.static(__dirname + '/public/'));
 
 // Routes
+app.use('/things', things);
+app.use('/customers', customers);
 
 // Handle index file separately
 app.get('/', function(req, res) {
