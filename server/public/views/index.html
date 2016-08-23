@@ -27,9 +27,13 @@
   </ul> -->
 
 <!-- div in which to put the customer list -->
+<div class="container-fluid">
+
+
   <div class="pull-left">
-    <ul ng-repeat="customer in customers">
-      <li ng-click="getOrders(customer.id)">
+    <h2>Customers</h2>
+    <ul ng-repeat="customer in customers" class="list-group">
+      <li ng-click="getOrders(customer.id)" class="list-group-item">
         {{customer.first_name}} {{customer.last_name}}
       </li>
     </ul>
@@ -37,12 +41,14 @@
 
   <!-- div for the order history  -->
   <div class="pull-right">
-    <ul ng-repeat="order in orders">
-      <li>
+    <h2>Orders</h2>
+    <ul ng-repeat="order in orders" class="list-group">
+      <li class="list-group-item">
         {{order.street}} {{order.city}} {{order.state}} {{order.zip}} {{order.address_type}} {{order.order_date | date : medium}} {{order.total}} {{order.quantity}} {{order.description}}
       </li>
     </ul>
-
   </div>
+
+</div>
 </body>
 </html>
