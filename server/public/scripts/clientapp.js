@@ -38,16 +38,7 @@ myApp.controller('IndexController', ['$scope', '$http', function($scope, $http) 
       method: 'GET',
       url: '/customers/' + id
     }).then(function (response) {
-      // console.log('response object ', response);
-      // var dateUpdate = response.data;
-      // console.log(dateUpdate);
-      // for (var i = 0; i < dateUpdate.length; i++) {
-      //   var swagDate = new Date(Date.parse(dateUpdate[i].order_date));
-      //   console.log(swagDate);
-      //   dateUpdate[i].order_date = swagDate;
-      //   console.log(dateUpdate[i]);
-      // }
-
+    
       $scope.orders = response.data;
     });
   }
